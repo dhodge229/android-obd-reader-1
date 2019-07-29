@@ -544,6 +544,10 @@ public class TripRecord implements DefineObdReader {
     public String getmFuelPressure() {
         return mFuelPressure;
     }
+    
+    public String getmFuelLevel() {
+        return mFuelLevel;
+    }
 
     public String getmEngineLoad() {
         return mEngineLoad;
@@ -701,6 +705,7 @@ public class TripRecord implements DefineObdReader {
                 "\n" + AvailableCommandNames.EQUIV_RATIO.getValue() + ":  " + mEquivRatio +
                 "\n" + AvailableCommandNames.DTC_NUMBER.getValue() + ":  " + mDtcNumber +
                 "\n" + AvailableCommandNames.DESCRIBE_PROTOCOL.getValue() + ":  " + mDescribeProtocol +
+                "\n" + "VIN":  " + mVehicleIdentificationNumber +
                 "\n" + AvailableCommandNames.PENDING_TROUBLE_CODES.getValue() + ":  " + mPendingTroubleCode;
 
     }
