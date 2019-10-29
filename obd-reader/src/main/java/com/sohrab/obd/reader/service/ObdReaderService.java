@@ -405,8 +405,12 @@ public class ObdReaderService extends IntentService implements DefineObdReader {
         boolean isBlueToothSupported = getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH);
         boolean isInitialized = initialize();
 
-        if (!isBlueToothSupported || !isInitialized) {
+        if (!isBlueToothSupported) {
+            //Only show toast when not supported
             Toast.makeText(this, getString(R.string.bluetooth_unsupported), Toast.LENGTH_SHORT).show();
+        }
+        
+        if (!isBlueToothSupported || !isInitialized) {
             return false;
         }
 
