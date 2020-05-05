@@ -77,7 +77,7 @@ public class ObdReaderService extends IntentService implements DefineObdReader {
 
     //   private static final int NOTIFICATION_ID = 101;
     private static final int DELAY_FIFTEEN_SECOND = 15000;
-    private static final int DELAY_TWO_SECOND = 2000;
+    private static final int DELAY_TWO_SECOND = 200;
     // this is used to find TroubleCode if true. This is used in InspectionActivity where fault is shown.
     public boolean mIsFaultCodeRead = true;
     private final IBinder mBinder = new LocalBinder();
